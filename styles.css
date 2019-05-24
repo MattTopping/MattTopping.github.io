@@ -35,9 +35,12 @@ html, body{
     color: black;
 }
 
-#downArrow{
+p{
     margin-block-start: 0;
     margin-block-end: 0;
+}
+
+#downArrow{
     font-size: 45px;
 }
 
@@ -55,11 +58,32 @@ html, body{
 
 #frameContainer{
     padding: 0%;
-    background-color: black;
+    background-color: rgb(0, 46, 128);
 }
 
 #formHeader{
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
+}
+
+#footer{
+    color: white;
+    background-color: rgb(0, 46, 128);
+    text-align: center;
+    font-size: 14px;
+    padding: 4%;
+}
+
+#footer a{
+    color: lightsteelblue;
+    text-decoration: underline;
+}
+
+#footer a:hover{
+    color: rgb(177, 177, 177);
+}
+
+#footer a:visited{
+    color: white;
 }
