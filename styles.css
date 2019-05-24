@@ -3,6 +3,7 @@ html, body{
     padding: 0 !important;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
     scroll-behavior: smooth;
+    min-width: 520px;
 }
 
 #landingContainer{
@@ -47,15 +48,14 @@ html, body{
 }
 
 @-webkit-keyframes arrow{
-    0% {top: 0%; bottom: 0%}
-    25% {top: 1%; bottom: 0%}
-    50% {top: 0%; bottom: 0%}
-    75% {top: 0%; bottom: 1%}
-    100% {top: 0%; bottom: 0%}
+    0% , 20%, 50%, 80%, 100% {top: 0%; bottom: 0%}
+    40% {top: 1%;}
+    60% {top: 2%;}
 }
 
 #frameContainer{
-    padding: 2%;
+    padding: 0%;
+    background-color: black;
 }
 
 #formHeader{
