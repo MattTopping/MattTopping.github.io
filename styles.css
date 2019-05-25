@@ -6,23 +6,31 @@ html, body{
     min-width: 520px;
 }
 
-pre{
-    margin: 0 !important;
-    padding: 0 !important; 
-}
+/* --------------------------------------------------------------------------------------- */
 
 nav{
-    float: right;
-    width: 50vw;
     height: 45vh;
+    right: 5vw;
     margin-top: 27.5vh;
     margin-bottom: 27.5vh;
-    margin-right: 5vw;
-    margin-left: 45vw;
     text-align: center;
     position: fixed;
-    overflow: hidden;
     z-index: 1;
+}
+
+.navTagContainer{
+    height: 5vh;
+    width: 5vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    direction: rtl;
+    float: right
+}
+
+.navTagContainer:hover{
+    width: 100%;
+    transition: ease-in-out 0.5s;
 }
 
 .navBlock{
@@ -30,17 +38,24 @@ nav{
     width: 5vh;
     padding-top: 0.9vh;
     background-color: rgba(255, 255, 255, 0.6);
-    float: right; 
-    white-space: nowrap;
-    text-align: right;
-    direction: rtl;
-    overflow: hidden;
+    text-align: center;
+    float: right;
+    font-size: 3vh;
 }
 
-.navBlock:hover{
-    width: 100%;
-    transition: 0.75s ease-in-out;
+.navTag{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 2.5vh;
+    padding-top: 0.5vh;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 2vh;
 }
+
+/* --------------------------------------------------------------------------------------- */
 
 .navLine{
     margin-right: 2vh;
@@ -51,7 +66,6 @@ nav{
 
 .navLink{
     text-decoration: none;
-    font-size: 3vh;
 }
 
 #landingContainer{
