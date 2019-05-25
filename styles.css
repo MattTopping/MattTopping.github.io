@@ -37,7 +37,7 @@ nav{
     height: 4.1vh;
     width: 5vh;
     padding-top: 0.9vh;
-    background-color: rgba(25, 25, 29, 0.5);
+    background-color: rgba(25, 25, 29, 0.8);
     text-align: center;
     float: right;
     font-size: 3vh;
@@ -52,14 +52,14 @@ nav{
     white-space: nowrap;
     padding-top: 0.5vh;
     overflow: hidden;
-    background-color: rgba(25, 25, 29, 0.5);
+    background-color: rgba(25, 25, 29, 0.8);
     font-size: 2vh;
 }
 
 .navLine{
     margin-right: 2vh;
     height: 5vh;
-    border-right: 0.5vh solid rgba(25, 25, 29, 0.5);
+    border-right: 0.5vh solid rgba(25, 25, 29, 0.8);
     float: right;
 }
 
