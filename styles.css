@@ -17,22 +17,49 @@ html, body{
 #landingButtonBox{
     padding-top: 45vh;
     text-align: center;
-    animation: arrow 2.25s infinite;
-    -webkit-animation: arrow 2.25s infinite;
+    animation: arrowDown 2.25s infinite;
+    -webkit-animation: arrowDown 2.25s infinite;
     position: relative;
 }
 
-.aButtons{
+.arrowButtons{
     color: black;
     text-decoration: none;
+    font-size: 45px;
 }
 
-.aButtons:hover{
+.arrowButtons:hover{
     color: rgb(49, 51, 53);
 }
 
-.aButtons:visited{
+.arrowButtons:visited{
     color: black;
+}
+
+.navigationWrapper{
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.up {
+    animation: arrowUp 2.25s infinite;
+    -webkit-animation: arrowUp 2.25s infinite;
+}
+
+.down{
+    animation: arrowDown 2.25s infinite;
+    -webkit-animation: arrowDown 2.25s infinite;
+}
+
+.contentContainer{
+    height: 80vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 p{
@@ -40,31 +67,36 @@ p{
     margin-block-end: 0;
 }
 
-#downArrow{
-    font-size: 45px;
-}
-
-@keyframes arrow{
+@keyframes arrowDown{
     0% , 20%, 50%, 80%, 100% {top: 0%; bottom: 0%}
     40% {top: 1%;}
     60% {top: 2%;}
 }
 
-@-webkit-keyframes arrow{
+@-webkit-keyframes arrowDown{
     0% , 20%, 50%, 80%, 100% {top: 0%; bottom: 0%}
     40% {top: 1%;}
     60% {top: 2%;}
 }
 
-#frameContainer{
-    padding: 0%;
-    background-color: rgb(0, 46, 128);
+@keyframes arrowUp{
+    0% , 20%, 50%, 80%, 100% {top: 0%; bottom: 0%}
+    40% {top: -1%;}
+    60% {top: -2%;}
 }
 
-#formHeader{
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
+@-webkit-keyframes arrowUp{
+    0% , 20%, 50%, 80%, 100% {top: 0%; bottom: 0%}
+    40% {top: -1%;}
+    60% {top: -2%;}
+}
+
+#introBlurbContainer{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: bisque;
 }
 
 #footer{
