@@ -6,7 +6,7 @@ html, body{
     min-width: 520px;
 }
 
-/* --------------------------------------------------------------------------------------- */
+/* --- Nav CSS ------------------------------------------------------------------------ */
 
 nav{
     height: 45vh;
@@ -30,7 +30,7 @@ nav{
 
 .navTagContainer:hover{
     width: 100%;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.75s;
 }
 
 .navBlock{
@@ -49,13 +49,12 @@ nav{
     padding-left: 15px;
     padding-right: 15px;
     height: 2.5vh;
+    white-space: nowrap;
     padding-top: 0.5vh;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 2vh;
 }
-
-/* --------------------------------------------------------------------------------------- */
 
 .navLine{
     margin-right: 2vh;
@@ -64,29 +63,73 @@ nav{
     float: right;
 }
 
+/* link style */
+
 .navLink{
     text-decoration: none;
+    color: white;
 }
+
+
+
+/* ---Landing page CSS----------------------------------------------------------------------- */
 
 #landingContainer{
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-color: darkslateblue;
+    background-image: url("images/background.jpg");
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #landingButtonBox{
-    padding-top: 45vh;
-    font-size: 45px;
+    font-size: 36px;
+    padding-top: 4vh;
     text-align: center;
     animation: arrowDown 2.25s infinite;
     -webkit-animation: arrowDown 2.25s infinite;
     position: relative;
 }
 
+#nameContainer{
+    padding-top: 38vh;
+    text-align: center;
+}
+
+#landingName{
+    margin: 0;
+    padding: 0;
+    font-size: 56px;
+    white-space: nowrap;   
+    border-right: solid 5px transparent;
+    display: inline;
+    animation: cursorAnimation 0.75s infinite;
+}
+
+@keyframes typewriterName{
+    0% {width: 0%}
+    100%{width: 100%}
+}
+
+@keyframes cursorAnimation{
+    0% {border-color: transparent;}
+    50% {border-color: orange;}
+    100%{border-color: transparent;}
+}
+
+#landingDescription{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* ---Navigation Arrow + page structure CSS----------------------------------------------------------------------- */
+
 .arrowButtons{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -95,7 +138,7 @@ nav{
 }
 
 .arrowButtons:visited{
-    color: black;
+    color: white;
 }
 
 .navigationWrapper{
@@ -118,18 +161,6 @@ nav{
 .down{
     animation: arrowDown 2.25s infinite;
     -webkit-animation: arrowDown 2.25s infinite;
-}
-
-.contentContainer{
-    height: 70vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-p{
-    margin-block-start: 0;
-    margin-block-end: 0;
 }
 
 @keyframes arrowDown{
@@ -156,13 +187,39 @@ p{
     60% {top: -2%;}
 }
 
-#introBlurbContainer{
+.contentContainer{
+    height: 70vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---Navigation Arrow + page structure CSS----------------------------------------------------------------------- */
+
+.shellContainer{
     height: 100vh;
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: bisque;
 }
+
+#introBlurb{
+    background-color: saddlebrown;
+}
+
+#work{
+    background-color: goldenrod;
+}
+
+#personal{
+    background-color: darkgreen;
+}
+
+#contact{
+    background-color: midnightblue;
+}
+
+
 
 #footer{
     color: white;

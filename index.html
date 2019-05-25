@@ -10,8 +10,8 @@
         <nav>
             <!-- Create links -->
             <div class="navTagContainer">
-                <div class="navBlock"><a href="" class="navLink">1</a></div>
-                <div class="navTag"><a href="" class="navLink">Home</a></div>
+                <div class="navBlock"><a href="#landingContainer" class="navLink">1</a></div>
+                <div class="navTag"><a href="#landingContainer" class="navLink">Home</a></div>
             </div>
 
             <div style="clear: both"></div>
@@ -19,17 +19,8 @@
             <div style="clear: both"></div>
 
             <div class="navTagContainer">
-                <div class="navBlock"><a href="" class="navLink">2</a></div>
-                <div class="navTag"><a href="" class="navLink">About</a></div>
-            </div>
-
-            <div style="clear: both"></div>
-            <div class="navLine"></div>
-            <div style="clear: both"></div>
-            
-            <div class="navTagContainer">
-                <div class="navBlock"><a href="" class="navLink">3</a></div>
-                <div class="navTag"><a href="" class="navLink">Qualifications & Experience</a></div>
+                <div class="navBlock"><a href="#introBlurb" class="navLink">2</a></div>
+                <div class="navTag"><a href="#introBlurb" class="navLink">About</a></div>
             </div>
 
             <div style="clear: both"></div>
@@ -37,8 +28,8 @@
             <div style="clear: both"></div>
             
             <div class="navTagContainer">
-                <div class="navBlock"><a href="" class="navLink">4</a></div>
-                <div class="navTag"><a href="" class="navLink">Personal Interests</a></div>
+                <div class="navBlock"><a href="#work" class="navLink">3</a></div>
+                <div class="navTag"><a href="#work" class="navLink">Qualifications & Experience</a></div>
             </div>
 
             <div style="clear: both"></div>
@@ -46,18 +37,31 @@
             <div style="clear: both"></div>
             
             <div class="navTagContainer">
-                <div class="navBlock"><a href="" class="navLink">5</a></div>
-                <div class="navTag"><a href="" class="navLink">Contact Information</a></div>
+                <div class="navBlock"><a href="#personal" class="navLink">4</a></div>
+                <div class="navTag"><a href="#personal" class="navLink">Personal Interests</a></div>
+            </div>
+
+            <div style="clear: both"></div>
+            <div class="navLine"></div>
+            <div style="clear: both"></div>
+            
+            <div class="navTagContainer">
+                <div class="navBlock"><a href="#contact" class="navLink">5</a></div>
+                <div class="navTag"><a href="#contact" class="navLink">Contact Information</a></div>
             </div>
         </nav>
 
         <div id="landingContainer" >
+            <div id="nameContainer">
+                <p id="landingName">Matt Topping.</p>
+                <p id="landingDescription">Programmer and Marketer.</p>
+            </div>
             <div id="landingButtonBox">
-                <a class="arrowButtons" href="#introBlurbContainer">Welcome to the Test Webpage <br> &#9660</a>
+                <a class="arrowButtons" href="#introBlurb">Learn More. <br> &#9660</a>
             </div>
         </div>
 
-        <div id="introBlurbContainer">
+        <div id="introBlurb" class="shellContainer">
                 <div class="navigationWrapper up">
                     <a class="arrowButtons" href="#landingContainer">&#9650</a>
                 </div>
@@ -66,13 +70,45 @@
 
                 </div>
                 <div class="navigationWrapper down">
-                    <a class="arrowButtons" href="#footer">&#9660</a>
+                    <a class="arrowButtons" href="#work">&#9660</a>
                 </div>
         </div>
-        <div id="footer">
-            <p>
-                This is a work in progress!
-            </p>
+
+        <div id="work" class="shellContainer">
+                <div class="navigationWrapper up">
+                    <a class="arrowButtons" href="#introBlurb">&#9650</a>
+                </div>
+                <div class="contentContainer">
+                    <!-- Enter Content Here! -->
+
+                </div>
+                <div class="navigationWrapper down">
+                    <a class="arrowButtons" href="#personal">&#9660</a>
+                </div>
+        </div>
+
+        <div id="personal" class="shellContainer">
+                <div class="navigationWrapper up">
+                    <a class="arrowButtons" href="#work">&#9650</a>
+                </div>
+                <div class="contentContainer">
+                    <!-- Enter Content Here! -->
+
+                </div>
+                <div class="navigationWrapper down">
+                    <a class="arrowButtons" href="#contact">&#9660</a>
+                </div>
+        </div>
+
+        <div id="contact" class="shellContainer">
+                <div class="navigationWrapper up">
+                    <a class="arrowButtons" href="#personal">&#9650</a>
+                </div>
+                <div class="contentContainer">
+                    <!-- Enter Content Here! -->
+
+                </div>
+                <div class="navigationWrapper down"></div>
         </div>
     </body>
 </html>
