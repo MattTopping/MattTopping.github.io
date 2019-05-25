@@ -150,6 +150,7 @@ nav{
     padding-top: 5vh;
     font-size: 5vw;
     padding-bottom: 5vh;
+    overflow: hidden;
     position: relative;
     line-height: 50%;
 }
@@ -255,22 +256,32 @@ nav{
     background-color: antiquewhite;
 }
 
-.workContainer{
-    height: calc(70vh/3);
+.workContent{
+    height: 70vh;
     width: 75vw;
 }
 
-.workLogo{
-    height: calc(70vh/3 - 6vh);
-    width: calc(70vh/3 - 6vh);
-    margin: 3vh;
-    margin-left: 6vw;
+.workContainer{
+    height: calc(23.3vh - 4vh);
+    width: calc(75vw - 4vh);
+    padding: 2vh;
+    background-color: coral;
 }
 
-.workContent{
-    height: calc(70vh/3 - 6vh);
-    width: calc(75vw - (70vh/3) - 6vw);
+.workLogo{
+    height: calc(23.3vh - 8vh);
+    width: calc(23.3vh - 8vh);
+    margin: 2vh;
+    float: left;
 }
+
+.workWriting{
+    float: right;
+    width: calc(75vw - 23.3vh - 4vh);
+    height: calc(23.3vh - 4vh);
+    background-color: grey;
+}
+
 
 /* ---Work Page CSS----------------------------------------------------------------------- */
 
