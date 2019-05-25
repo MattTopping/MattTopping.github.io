@@ -13,12 +13,12 @@ pre{
 
 nav{
     float: right;
-    width: 25vw;
+    width: 50vw;
     height: 45vh;
     margin-top: 27.5vh;
     margin-bottom: 27.5vh;
     margin-right: 5vw;
-    margin-left: 70vw;
+    margin-left: 45vw;
     text-align: center;
     position: fixed;
     overflow: hidden;
