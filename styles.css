@@ -148,9 +148,10 @@ nav{
     padding: 0;
     margin: 0;
     padding-top: 5vh;
-    font-size: 5vh;
+    font-size: 5vw;
     padding-bottom: 5vh;
     position: relative;
+    line-height: 50%;
 }
 
 .up {
@@ -194,8 +195,6 @@ nav{
     padding: 0;
 }
 
-/* ---Navigation Arrow + page structure CSS----------------------------------------------------------------------- */
-
 .shellContainer{
     height: 100vh;
     width: 100%;
@@ -203,9 +202,35 @@ nav{
     margin: 0;
 }
 
+/* --- Blurb page CSS----------------------------------------------------------------------- */
 #introBlurb{
     background-color: saddlebrown;
 }
+
+#picOne{
+    width: 47.5vw;
+    height: 50vh;
+    background-color: black;
+}
+
+#blurbContent{
+    width: 52.5vw;
+    height: 100vh;
+    float: right;
+    background-color: grey;
+}
+
+.blurbRescale{
+    text-align: left !important;
+}
+
+#picTwo{
+    width: 47.5vw;
+    height: 50vh;
+    background-color: bisque;
+}
+
+/* ---Work Page Css----------------------------------------------------------------------- */
 
 #work{
     background-color: goldenrod;
@@ -217,27 +242,4 @@ nav{
 
 #contact{
     background-color: midnightblue;
-}
-
-
-
-#footer{
-    color: white;
-    background-color: rgb(0, 46, 128);
-    text-align: center;
-    font-size: 18px;
-    padding: 4%;
-}
-
-#footer a{
-    color: lightsteelblue;
-    text-decoration: underline;
-}
-
-#footer a:hover{
-    color: rgb(177, 177, 177);
-}
-
-#footer a:visited{
-    color: white;
 }
