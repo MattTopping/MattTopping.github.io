@@ -190,7 +190,7 @@ nav{
 }
 
 .contentContainer{
-    height: 70vh;
+    height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -222,7 +222,7 @@ nav{
 }
 
 .blurbRescale{
-    text-align: left !important;
+    text-align: left;
 }
 
 #picTwo{
@@ -240,7 +240,7 @@ nav{
 .workRescale{
     padding-left:22.5vw;
     width: 52.5vw;
-    text-align: left !important;
+    text-align: left;
 }
 
 #workContent{
@@ -291,10 +291,10 @@ nav{
 
 #vidOne{
     float: left;
-    margin-top: 2.5vh;
-    margin-left: 2.5vw;
-    height: 40vh;
-    width: 40vw;
+    height: 45vh;
+    width: 43.85vw;
+    padding: 0;
+    margin: 0;
     background-color: crimson;
 }
 
@@ -307,16 +307,16 @@ nav{
     background-color: olive;
 }
 
-#personsalUpperContent{
+#personalUpperContent{
     height: 30vh;
-    width: 100vw;
-    max-width: 100%;
+    width: 55vw;
     background-color: crimson;
 }
 
 .personalRescale{
     width: 50vw;
     padding-left: 2.5vw;
+    margin-right: 0;
     text-align: left;
 }
 
@@ -346,4 +346,124 @@ nav{
     height: 30vh;
     width: 50%;
     background-color: black;
+}
+
+/* -----------Rescale ----------------------------------------------- */
+
+@media screen and (orientation: portrait) {
+
+    nav{
+        display: none;
+    }
+
+    /* --- P2 scaling --- */
+    #picOne{
+        display: none;
+    }
+
+    #picTwo{
+        display: none;
+    }
+
+    #blurbContent{
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        float: none;
+        background-color: grey;
+    }
+    
+    .blurbRescale{
+        text-align: center;
+    }
+
+    /* --- P3 scaling ---*/
+    #picThree{
+        display: none;
+    }
+
+    .workRescale{
+        width: 100vw;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    #workContent{
+        width: 100vw;
+        height: 100vh;
+        background-color: lightblue;
+    }
+    
+    .workContainer{
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: calc(70vh/3);
+    }
+    
+    .workLogo{
+        float: none;
+        height: 5vh;
+        width: 5vh;
+        margin: 0;
+        margin-left: calc(50vw - 2.5vh);
+    }
+    
+    .workWriting{
+        float: none;
+        background-color: grey;
+        margin:0;
+        padding: 1vh;
+
+        width: calc(100vw - 2vh);
+        height: calc(70vh/3 - 5vh - 2vh);
+    }
+
+    /* --- P4 scaling ---*/
+    #personal{
+        background-color: darkgreen;
+    }
+    
+    #vidOne{
+        display: none;
+    }
+    
+    #personalUpper{
+        float: none;
+        height: 45vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        background-color: olive;
+    }
+    
+    #personalUpperContent{
+        height: 26vh;
+        padding: 2vh;
+        width: calc(100vw - 4vh);
+        background-color: blueviolet;
+    }
+    
+    .personalRescale{
+        width: 100vw;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    #personalLowerContent{
+        padding-top: 0;
+        height: 40vh;
+        width: 100%;
+        background-color: mediumpurple;
+    }
+
+    /* --- P4 scaling ---*/    
+    #contactInfo{
+        margin-top: 10vh;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 50vh;
+        width: 80%;
+    }
 }
