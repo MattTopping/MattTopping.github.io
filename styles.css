@@ -4,10 +4,10 @@ html, body{
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
     scroll-behavior: smooth;
     min-width: 520px;
+    background-color: rgb(45, 45, 50);
 }
 
 /* --- Nav CSS ------------------------------------------------------------------------ */
-
 nav{
     height: 45vh;
     right: 5vw;
@@ -70,7 +70,56 @@ nav{
     color: white;
 }
 
+/* Page 2 Nav Styles */
+.navRevised{
+    visibility: hidden;
+}
 
+.borderRevised{
+    border-right: 0.5vh dotted rgba(25, 25, 29, 0.8) !important;
+}
+
+#homeButton{
+    height: 5vw;
+    width: 5vw;
+    right: 47.5vw;
+    margin-top: 5vh;
+    position: fixed;
+    z-index: 1;
+    background-image: url("images/homeIcon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mobileNav{
+    height: 3vh;
+    width: 3vh;
+    margin-top: 3.85vh;
+    position: fixed;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#blurbLink{
+    right: calc(50% + 30vw - 1.5vh);
+    background-image: url("images/quoteIcon.png");
+}
+
+#workLink{
+    right: calc(50% + 15vw - 1.5vh);
+    background-image: url("images/uniIcon.png");
+}
+
+#personalLink{
+    right: calc(50% - 15vw - 1.5vh);
+    background-image: url("images/scrollIcon.png");
+}
+
+#contactLink{
+    right: calc(50% - 30vw - 1.5vh);
+    background-image: url("images/phoneIcon.png");
+}
 
 /* ---Landing page CSS----------------------------------------------------------------------- */
 
@@ -211,14 +260,22 @@ nav{
 #picOne{
     width: 47.5vw;
     height: 50vh;
-    background-color: black;
+    background-image: url("images/picOne.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #blurbContent{
     width: 52.5vw;
     height: 100vh;
     float: right;
-    background-color: grey;
+    background-color: rgb(45, 45, 50);
+}
+
+#blurbWritingContainer{
+    margin-left: 2vw;
+    margin-right: 10vw;
+    background-color: white;
 }
 
 .blurbRescale{
@@ -228,14 +285,12 @@ nav{
 #picTwo{
     width: 47.5vw;
     height: 50vh;
-    background-color: bisque;
+    background-image: url("images/picTwo.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* ---Work Page CSS----------------------------------------------------------------------- */
-
-#work{
-    background-color: goldenrod;
-}
 
 .workRescale{
     padding-left:22.5vw;
@@ -247,13 +302,15 @@ nav{
     width: 75vw;
     height: 100vh;
     float: right;
-    background-color: lightblue;
+    background-color: rgb(45, 45, 50);
 }
 
 #picThree{
     width: 25vw;
     height: 100vh;
-    background-color: antiquewhite;
+    background-image: url("images/picThree.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .workContent{
@@ -265,7 +322,7 @@ nav{
     height: calc(23.3vh - 4vh);
     width: calc(75vw - 4vh);
     padding: 2vh;
-    background-color: coral;
+    background-color: rgb(45, 45, 50);
 }
 
 .workLogo{
@@ -277,16 +334,34 @@ nav{
 
 .workWriting{
     float: right;
-    width: calc(75vw - 23.3vh - 4vh);
+    width: calc(75vw - 23.3vh - 4vh - 10vw);
+    margin-right: 10vw;
     height: calc(23.3vh - 4vh);
     background-color: grey;
 }
 
+#logoOne{
+    background-image: url("images/qutLogo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logoTwo{
+    background-image: url("images/rwnLogo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logoThree{
+    background-image: url("images/nlsclogo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* ---Personal CSS----------------------------------------------------------------------- */
 
 #personal{
-    background-color: darkgreen;
+    background-color: rgb(45, 45, 50);
 }
 
 #vidOne{
@@ -295,7 +370,9 @@ nav{
     width: 45%;
     padding: 0;
     margin: 0;
-    background-color: crimson;
+    background-image: url("images/picFour.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #personalUpper{
@@ -304,13 +381,14 @@ nav{
     width: 55%;
     padding: 0;
     margin: 0;
-    background-color: olive;
+    background-image: url("images/picFive.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #personalUpperContent{
     height: 30vh;
     width: 100%;
-    background-color: crimson;
 }
 
 .personalRescale{
@@ -321,22 +399,23 @@ nav{
 }
 
 #personalLowerContent{
-    padding-top: 45vh;
-    height: 40vh;
-    width: 100%;
-    background-color: mediumpurple;
+    padding-top: 50vh;
+    height: 35vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    background-color: white;
 }
 
 /* ---Contact CSS----------------------------------------------------------------------- */
 #contact{
-    background-color: midnightblue;
+    background-color: rgb(45, 45, 50);
 }
 
 .contactContainer{
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: bisque
 }
 
 #contactInfo{
@@ -348,12 +427,31 @@ nav{
     background-color: black;
 }
 
+/* ---Resume CSS----------------------------------------------------------------------- */
+
+#resumeContainer{
+    padding-top: calc(5vw + 10vh);
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 100%;
+    background-color: bisque;
+}
+
 /* -----------Rescale ----------------------------------------------- */
+@media screen and (orientation: landscape) {
+    .mobileNav{
+        display: none;
+    }
+}
 
 @media screen and (orientation: portrait) {
-
     nav{
-        display: none;
+        visibility: hidden;
+    }
+
+    .navTagContainer:hover{
+        width: 5vh;
     }
 
     /* --- P2 scaling --- */
@@ -371,7 +469,13 @@ nav{
         padding: 0;
         margin: 0;
         float: none;
-        background-color: grey;
+        background-color: rgb(45, 45, 50);
+    }
+
+    #blurbWritingContainer{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        background-color: white;
     }
     
     .blurbRescale{
@@ -392,7 +496,7 @@ nav{
     #workContent{
         width: 100vw;
         height: 100vh;
-        background-color: lightblue;
+        background-color: rgb(45, 45, 50);
     }
     
     .workContainer{
@@ -415,14 +519,15 @@ nav{
         background-color: grey;
         margin:0;
         padding: 1vh;
-
-        width: calc(100vw - 2vh);
+        margin-right: 5vw;
+        margin-left: 5vw;
+        width: calc(100vw - 2vh - 10vw);
         height: calc(70vh/3 - 5vh - 2vh);
     }
 
     /* --- P4 scaling ---*/
     #personal{
-        background-color: darkgreen;
+        background-color: rgb(45, 45, 50);
     }
     
     #vidOne{
@@ -445,7 +550,6 @@ nav{
         padding-left: 2%;
         padding-right: 2%;
         width: 96%;
-        background-color: blueviolet;
     }
     
     .personalRescale{
@@ -456,17 +560,23 @@ nav{
     
     #personalLowerContent{
         padding-top: 0;
-        height: 40vh;
-        width: 100%;
-        background-color: mediumpurple;
+        margin-top: 5vh;
+        height: 35vh;
     }
 
-    /* --- P4 scaling ---*/    
+    /* --- P5 scaling ---*/    
     #contactInfo{
         margin-top: 10vh;
         margin-left: 10%;
         margin-right: 10%;
         height: 50vh;
         width: 80%;
+    }
+
+    /* --- R scaling ---*/ 
+    #resumeContainer{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 90vw;
     }
 }
