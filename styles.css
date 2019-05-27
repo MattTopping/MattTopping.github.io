@@ -309,7 +309,7 @@ nav{
 
 #personalUpperContent{
     height: 30vh;
-    width: 55vw;
+    width: 100%;
     background-color: crimson;
 }
 
@@ -432,7 +432,7 @@ nav{
     #personalUpper{
         float: none;
         height: 45vh;
-        width: 100vw;
+        width: 100%;
         padding: 0;
         margin: 0;
         background-color: olive;
@@ -440,13 +440,16 @@ nav{
     
     #personalUpperContent{
         height: 26vh;
-        padding: 2vh;
-        width: calc(100vw - 4vh);
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        padding-left: 2%;
+        padding-right: 2%;
+        width: 96%;
         background-color: blueviolet;
     }
     
     .personalRescale{
-        width: 100vw;
+        width: 100%;
         padding-left: 0;
         text-align: center;
     }
