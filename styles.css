@@ -128,7 +128,7 @@ nav{
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("images/background.JPG");
+    /* background-image: url("images/background.JPG"); */
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
@@ -276,6 +276,7 @@ nav{
     margin-left: 2vw;
     margin-right: 10vw;
     background-color: white;
+    overflow: hidden;
 }
 
 .blurbRescale{
@@ -338,6 +339,7 @@ nav{
     margin-right: 10vw;
     height: calc(23.3vh - 4vh);
     background-color: grey;
+    overflow: hidden;
 }
 
 #logoOne{
@@ -405,6 +407,7 @@ nav{
     margin-right: 5%;
     width: 90%;
     background-color: white;
+    overflow: hidden;
 }
 
 /* ---Contact CSS----------------------------------------------------------------------- */
@@ -435,7 +438,38 @@ nav{
     margin-right: 10vw;
     width: 80vw;
     height: 100%;
-    background-color: bisque;
+    background-color: rgb(45, 45, 50);
+}
+
+#leftContainer{
+    width: 20vw;
+    height: 100%;
+    float: left;
+}
+
+#rightContainer{
+    height: 100%;
+    width: 60vw;
+    float: right;
+}
+
+#photoContainer{
+    width: 20vw;
+    height: 20vw;
+    background-color: aquamarine;
+}
+
+#resumeContent{
+    height: calc(100vh - 6vw);
+    width: 54vw;
+    margin: 3vw;
+    background-color: grey;
+}
+
+.landscapeSkill{
+    height: calc(100vh - 20vw);
+    width: 20vw;
+    background-color: burlywood;
 }
 
 /* -----------Rescale ----------------------------------------------- */
