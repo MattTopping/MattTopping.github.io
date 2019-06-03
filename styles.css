@@ -365,7 +365,6 @@ nav{
     margin-right: 10vw;
     height: calc(23.3vh - 4vh);
     line-height: calc(23.3vh - 6vh);
-    /* background-color: grey; */
     color: white;
     text-align: center;
     font-size: 22px;
@@ -443,7 +442,6 @@ nav{
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
-    /* background-color: white; */
     overflow: hidden;
     color: white;
     text-align: center;
@@ -514,20 +512,17 @@ nav{
 #photoContainer{
     width: 20vw;
     height: 20vw;
-    /* background-color: aquamarine; */
 }
 
 #resumeContent{
     height: calc(100vh - 6vw);
     width: 54vw;
     margin: 3vw;
-    /* background-color: grey; */
 }
 
 .landscapeSkill{
     height: calc(100vh - 20vw);
     width: 20vw;
-    /* background-color: burlywood; */
 }
 
 /* -----------Rescale ----------------------------------------------- */
