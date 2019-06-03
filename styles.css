@@ -364,8 +364,18 @@ nav{
     width: calc(75vw - 23.3vh - 4vh - 10vw);
     margin-right: 10vw;
     height: calc(23.3vh - 4vh);
-    background-color: grey;
+    line-height: calc(23.3vh - 6vh);
+    /* background-color: grey; */
+    color: white;
+    text-align: center;
+    font-size: 22px;
     overflow: hidden;
+}
+
+.workWriting p{
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #logoOne{
@@ -429,16 +439,29 @@ nav{
 #personalLowerContent{
     padding-top: 5vh;
     height: 35vh;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-    background-color: white;
+    line-height: 35vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    /* background-color: white; */
     overflow: hidden;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+}
+
+#personalLowerContent p{
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* ---Contact CSS----------------------------------------------------------------------- */
 #contact{
     background-color: rgb(45, 45, 50);
+    background-image: url("images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contactContainer{
@@ -452,8 +475,17 @@ nav{
     margin-left: 25%;
     margin-right: 25%;
     height: 30vh;
+    line-height: 30vh;
     width: 50%;
-    background-color: black;
+    font-size: 28px;
+    text-align: center;
+    color: white;
+}
+
+#contactInfo p{
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* ---Resume CSS----------------------------------------------------------------------- */
@@ -482,20 +514,20 @@ nav{
 #photoContainer{
     width: 20vw;
     height: 20vw;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
 #resumeContent{
     height: calc(100vh - 6vw);
     width: 54vw;
     margin: 3vw;
-    background-color: grey;
+    /* background-color: grey; */
 }
 
 .landscapeSkill{
     height: calc(100vh - 20vw);
     width: 20vw;
-    background-color: burlywood;
+    /* background-color: burlywood; */
 }
 
 /* -----------Rescale ----------------------------------------------- */
@@ -536,7 +568,7 @@ nav{
         margin-left: 5vw;
         margin-right: 5vw;
         padding-right: 2vw;
-        font-size: 36px;
+        /* font-size: 36px; */
     }
     
     .blurbRescale{
@@ -577,11 +609,11 @@ nav{
     
     .workWriting{
         float: none;
-        background-color: grey;
         margin:0;
         padding: 1vh;
         margin-right: 5vw;
         margin-left: 5vw;
+        font-size: 28px;
         width: calc(100vw - 2vh - 10vw);
         height: calc(70vh/3 - 5vh - 2vh);
     }
