@@ -33,7 +33,7 @@
                 display: inline;
                 animation: cursorAnimation 0.75s infinite;
             }
-            #landingDescription{
+            .landingDescription{
                 padding: 0;
                 margin: 0;
                 text-align: center;
@@ -42,6 +42,9 @@
                 font-size: 36px;
                 padding-top: 4vh;
                 text-align: center;
+            }
+            .txt-sml{
+                font-size: 18px;
             }
             @keyframes cursorAnimation{
                 0% {border-color: transparent;}
@@ -54,11 +57,12 @@
     <body>
         <div id="landingContainer" >
             <div id="nameContainer">
-                <p id="landingName">Matt Topping.</p>
-                <p id="landingDescription">Programmer and Marketer.</p>
+                <p id="landingName">Matthew Topping.</p>
+                <p class="landingDescription">Programmer and Marketer.</p>
             </div>
             <div id="landingButtonBox">
-                <p id="landingDescription">This site is under construction.</p>
+                <p class="landingDescription">This site is under construction.</p>
+                <p class="landingDescription txt-sml">Please find my Resume <a href="resources/matthew-topping-resume.pdf">here</a>.</p>
             </div>
         </div>
     </body>
