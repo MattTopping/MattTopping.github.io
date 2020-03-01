@@ -1,0 +1,55 @@
+body{
+    font-family: 'Titillium Web', sans-serif; 
+    margin: 0px;
+}
+.fs-panel{
+    grid-template-columns: 60% 40%;
+    display: grid;
+    height: 100vh;
+    text-align: center;
+}
+.landing-left{
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    /* background-image: url('../images/left.png');
+    background-repeat: no-repeat;
+    background-position: right; */
+}
+.landing-right{
+    height: 100vh;
+    background-image: url('../images/right_new.png');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.title-container{
+    text-align: center;
+}
+#landing-name{
+    margin: 0;
+    padding: 0;
+    font-size: 56px;
+    white-space: nowrap;   
+    border-right: solid 5px transparent;
+    display: inline;
+    animation: cursorAnimation 0.75s infinite;
+}
+.landing-description{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+#landing-msg-construction{
+    font-size: 36px;
+    padding-top: 4vh;
+    text-align: center;
+}
+.txt-sml{
+    font-size: 18px;
+}
+@keyframes cursorAnimation{
+    0% {border-color: transparent;}
+    50% {border-color: orange;}
+    100%{border-color: transparent;}
+}
