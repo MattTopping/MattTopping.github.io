@@ -2,6 +2,56 @@ body{
     font-family: 'Titillium Web', sans-serif; 
     margin: 0px;
 }
+
+nav{
+    position: fixed;
+    z-index: 3000;
+    width: 94%;
+    padding: 1% 3%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    background-color: rgba(12,24,44, 0);
+    transition: 0.5s;
+}
+#nav--header{
+    color: rgba(255, 255, 255, 0);
+    font-size: 1.5rem;
+    margin:0.5rem;
+}
+.nav--hamburgerBar{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+.nav--hamburgerIcon{
+    justify-self: right;
+}
+.nav--overlay{
+    position: fixed;
+    z-index: 5000;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+}
+.nav--listcontainer{
+    align-self: center;
+}
+.nav--linklist{
+    display: grid;
+    text-align: center;
+}
+.nav--linklist a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav--popoutlist{
+    display: none;
+}
+
 .fs-panel{
     grid-template-columns: 60% 40%;
     display: grid;
@@ -12,15 +62,13 @@ body{
     height: 100vh;
     display: grid;
     align-content: center;
-    /* background-image: url('../');
-    background-repeat: no-repeat;
-    background-position: right; */
 }
 .landing-right{
     height: 100vh;
-    background-image: url('../images/right_new.png');
+    background-image: url('../images/landing.png');
     background-repeat: no-repeat;
     background-position: left;
+    background-size: cover;
 }
 
 .title-container{
