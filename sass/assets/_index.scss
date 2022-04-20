@@ -1,0 +1,66 @@
+.landing{
+    &__page{
+        &-container{
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            text-align: center;
+        }
+        &-title{
+            height: 100vh;
+            display: grid;
+            align-content: center;
+        }
+        &-arrow{
+            top: 87.5vh;
+            position: absolute;
+            justify-self: center;
+            color: $motif;
+            font-size: 1.5rem;
+            @include keyframes(pointerAnimation){
+                0% {top: 87.5vh;}
+                50% {top: 88.75vh;}
+                100%{top: 87.5vh;}
+            }
+            @include animate(pointerAnimation, 1s, infinite);
+            &:hover{
+                transform: scale(1.25);
+            }
+        }
+    }
+    &__element{
+        &-name{
+            margin: 0;
+            padding: 0;
+            font-size: 3rem;
+            white-space: nowrap;   
+            border-right: solid 5px transparent;
+            display: inline;
+            @include keyframes(cursorAnimation){
+                0% {border-color: transparent;}
+                50% {border-color: $highlight;}
+                100%{border-color: transparent;}
+            }
+            @include animate(cursorAnimation, 0.75s, infinite);
+        }
+    }
+
+    &__socials{
+        &-container{
+            text-align: center;
+            i{
+                color: $motif;
+                margin: .5rem;
+                font-size: 2rem;
+                transition: all 0.175s linear;
+                &:hover{
+                    transform: scale(1.25);
+                }
+            }
+        }
+    }
+}
+

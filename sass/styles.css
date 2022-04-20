@@ -1,0 +1,122 @@
+body {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+}
+
+.nav__ud-ctn {
+  border-top: midnightblue 3px solid;
+  -webkit-box-shadow: 0px 1.5px 2.5px #888;
+          box-shadow: 0px 1.5px 2.5px #888;
+}
+
+.landing__page-container {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+}
+
+.landing__page-title {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.landing__page-arrow {
+  top: 87.5vh;
+  position: absolute;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: midnightblue;
+  font-size: 1.5rem;
+  -webkit-animation: pointerAnimation 1s infinite;
+          animation: pointerAnimation 1s infinite;
+}
+
+@-webkit-keyframes pointerAnimation {
+  0% {
+    top: 87.5vh;
+  }
+  50% {
+    top: 88.75vh;
+  }
+  100% {
+    top: 87.5vh;
+  }
+}
+
+@keyframes pointerAnimation {
+  0% {
+    top: 87.5vh;
+  }
+  50% {
+    top: 88.75vh;
+  }
+  100% {
+    top: 87.5vh;
+  }
+}
+
+.landing__page-arrow:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.landing__element-name {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  white-space: nowrap;
+  border-right: solid 5px transparent;
+  display: inline;
+  -webkit-animation: cursorAnimation 0.75s infinite;
+          animation: cursorAnimation 0.75s infinite;
+}
+
+@-webkit-keyframes cursorAnimation {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes cursorAnimation {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+.landing__socials-container {
+  text-align: center;
+}
+
+.landing__socials-container i {
+  color: midnightblue;
+  margin: .5rem;
+  font-size: 2rem;
+  -webkit-transition: all 0.175s linear;
+  transition: all 0.175s linear;
+}
+
+.landing__socials-container i:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+/*# sourceMappingURL=styles.css.map */

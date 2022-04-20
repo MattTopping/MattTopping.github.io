@@ -1,0 +1,26 @@
+$motif: midnightblue;
+$highlight: orange;
+
+body{
+    font-family: 'Titillium Web', sans-serif; 
+    margin: 0;
+}
+
+.nav{
+    &__ud{
+        &-ctn{
+            border-top: $motif 3px solid;
+            box-shadow: 0px 1.5px 2.5px #888;
+        }
+    }
+}
+
+@mixin animate($animation, $duration,  $times){
+    animation: $animation $duration $times;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
