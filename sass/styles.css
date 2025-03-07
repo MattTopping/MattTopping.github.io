@@ -3,9 +3,21 @@ body {
   margin: 0;
 }
 
-.nav__ud-ctn {
+.util__border-topAccent {
   border-top: midnightblue 3px solid;
   box-shadow: 0px 1.5px 2.5px #888;
+}
+.util__links-motif {
+  color: midnightblue;
+}
+.util__links-motif :hover {
+  opacity: 75%;
+}
+.util__sizing-h100 {
+  height: 100%;
+}
+.util__sizing-w100 {
+  width: 100%;
 }
 
 .bg-csnet {

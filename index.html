@@ -2,21 +2,29 @@
  
 <html>
     <head>
-        <title>Matthew Topping.</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
-        <link rel="icon" href="images/icon.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- My Styles & Scripts -->
         <link rel="stylesheet" type="text/css" href="sass/styles.css">
+        <script src="scripts/scripts.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+        <!-- Icons -->
+        <link rel="icon" href="images/icon.png">
         <script src="https://kit.fontawesome.com/4b72a40324.js" crossorigin="anonymous"></script>
-        <script src="scripts/scripts.js"></script>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+
+        <!-- Metadata -->
+        <title>Matthew Topping.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">         
     </head>
 
     <body>
@@ -37,7 +45,7 @@
             <a href="#navigation"><i class="fas fa-arrow-down landing__page-arrow"></i></a>
         </div>
         
-        <nav id="navigation" class="navbar sticky-top navbar-expand-lg navbar-light bg-light nav__ud-ctn">
+        <nav id="navigation" class="navbar sticky-top navbar-expand-lg navbar-light bg-light util__border-topAccent">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="images/icon.png" alt="" width="45" height="45" class="d-inline-block aslign-text-middle">
@@ -49,14 +57,24 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <a class="btn btn-outline-dark" style="margin: 0 1rem;" href="resources/matthew-topping-resume.pdf" role="button">View Resume</a>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">About Matt</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Freelance Services
+                              Creative Arts Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item disabled">Portfolio Overview</a></li>
+                                <li><a class="dropdown-item disabled">Pedalboard Builds</a></li>
                                 <li><a class="dropdown-item disabled">Music</a></li>
                                 <li><a class="dropdown-item disabled">Photography & Videography</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              IT Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item disabled">Web Development</a></li>
                                 <li><a class="dropdown-item disabled">Dynamics 365 Consulting</a></li>
                             </ul>
@@ -65,15 +83,31 @@
                             <a class="nav-link disabled">Career History</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">About Matt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Contact</a>
+                            <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#contactPane" aria-controls="contactPane">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <!-- Contact Pane -->
+        <div class="offcanvas offcanvas-end text-end util__border-topAccent" data-bs-scroll="true" tabindex="-1" id="contactPane" aria-labelledby="contactPaneLabel">
+            <div class="p-4">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="d-flex flex-column align-items-end p-4 util__sizing-h100">
+                <div>
+                    <p class="lead">Interested in something you have seen?</p>
+                    <p>For any and all enquires contact <a class="util__links-motif" href="mailto:business@matthewtopping.com.au">business@matthewtopping.com.au</a></p>
+                </div>
+                <div class="mt-auto text-secondary fw-light">
+                    <p>
+                        Matthew Topping<br>
+                        ABN <a class="text-reset" href="https://abr.business.gov.au/ABN/View?id=49683491551">49 683 491 551</a>
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <div class="container">
             <div class="p-5 mb-4 bg-light border rounded-3 my-5">
@@ -89,7 +123,7 @@
             <div class="col-md-5 p-lg-5 mx-auto my-5">
                 <h1 class="display-4 fw-normal text-white">Web Developer</h1>
                 <p class="lead fw-normal text-white">Matt is currently a Web Developer for CSnet.</p>
-                <img src="https://csnet.net.au/wp-content/themes/CSnet-theme/assets/images/Logo-266x100.png">
+                <img width="150" src="https://csnet.net.au/wp-content/themes/CSnet-theme/assets/images/Logo-266x100.png">
             </div>
         </div>
         
@@ -111,8 +145,11 @@
                 </div>
             </div>
             
-            <footer class="pt-3 mt-4 text-muted border-top my-5">
-                &copy; 2022
+            <footer class="pt-3 mt-4 text-secondary fw-light border-top my-5">
+                <div class="util__sizing-w100 d-flex flex-row">
+                    <div class="flex-grow-1">&copy; 2025 Matthew Topping</div>
+                    <div class="mt-auto">ABN <a class="text-reset" href="https://abr.business.gov.au/ABN/View?id=49683491551">49 683 491 551</a></div>
+                </div>
             </footer>
         </div>
 </html>
