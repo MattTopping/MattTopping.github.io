@@ -31,7 +31,43 @@
         <div class="container">
             <h3>Gym Weight Plate Calculator</h3>
             <button type="button" class="btn btn-primary" onclick="buildConversionForm()">Generate plate weight</button>
-            <div id="container--plate-weights"></div>
+
+            <div id="container--conversion-form"></div>
+
+            <div id="container--plate-weights">
+                <table class="table table-striped table-hover">
+                    <caption>List Of Machines</caption>
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">Machine</th>
+                        <th scope="col">Series</th>
+                        <th scope="col">Plate Weight</th>
+                        <th scope="col">Select</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody--plate-weight" class="table-group-divider">
+                        <!-- Add table rows -->
+                        <tr>
+                            <th scope="row">Omni Lat/Row</th>
+                            <td>Infinity</td>
+                            <td>7.35kg</td>
+                            <td><button type="button" class="btn btn-primary">Set</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Omni Lat/Row</th>
+                            <td>Infinity</td>
+                            <td>7.35kg</td>
+                            <td><button type="button" class="btn btn-primary">Set</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Omni Lat/Row</th>
+                            <td>Infinity</td>
+                            <td>7.35kg</td>
+                            <td><button type="button" class="btn btn-primary">Set</button></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
         </div>
     </body>
 </html>
