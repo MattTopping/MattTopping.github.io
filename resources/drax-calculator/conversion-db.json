@@ -1,0 +1,29 @@
+{
+    "brandName": "Synergy",
+    "series":[
+        {
+            "seriesName": "Alpha",
+            "machines": [
+                {
+                    "machineName": "Functional Trainer",
+                    "totalStackWeight": 220,
+                    "numOfStacks": 2,
+                    "numOfPlates": 20,
+                    "pulleyRatio": 2
+                }
+            ]
+        },
+        {
+            "seriesName": "Infinity",
+            "machines": [
+                {
+                    "machineName": "Omni Lat/Row",
+                    "totalStackWeight": 147,
+                    "numOfStacks": null,
+                    "numOfPlates": 20,
+                    "pulleyRatio": null
+                }
+            ]
+        }
+    ]
+}
