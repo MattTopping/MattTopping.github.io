@@ -1,3 +1,6 @@
+// Debounce Time (ms)
+const debounceTime = 750; 
+
 // Table Targets
 const clearContextButtonId = "btn--clear-context";
 const clearSearchButtonId = "btn--clear-search";
@@ -121,6 +124,7 @@ function setWeightTotal(numberOfPlates){
     const totalWeightElement = document.getElementById(totalWeightInputId);
  
     if(weightPerPlateElement.value && totalWeightElement) totalWeightElement.value = weightPerPlateElement.value * numberOfPlates;
+    else return; // TODO: Alert user to set context?
 }
 
 // Calculates and sets the number of plates 
@@ -129,6 +133,7 @@ function setNumOfPlates(totalWeight){
     const numOfPlatesElement = document.getElementById(numOfPlatesInputId);
  
     if(weightPerPlateElement.value && numOfPlatesElement) numOfPlatesElement.value = totalWeight / weightPerPlateElement.value;
+    else return; // TODO: Alert user to set context?
 }
 
 // Set UI state based on the selected machine
@@ -201,6 +206,6 @@ function setupDebounce(element, callback) {
     var timeout = null
     element.addEventListener("keyup", () => {
         clearTimeout(timeout);
-        timeout = setTimeout(() => callback(element.value), 750);
+        timeout = setTimeout(() => callback(element.value), debounceTime);
     });
 }
