@@ -3,7 +3,7 @@
 <html>
     <head>
         <!-- My Styles & Scripts -->
-        <link rel="stylesheet" type="text/css" href="conversion.css">
+        <link rel="stylesheet" type="text/css" href="conversion-styles.css">
         <script src="conversion-service.js"></script>
 
         <!-- jQuery -->
@@ -16,7 +16,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
         <!-- Icons -->
-        <link rel="icon" href="images/icon.png">
+        <link rel="icon" href="../../images/icon.png">
         <script src="https://kit.fontawesome.com/4b72a40324.js" crossorigin="anonymous"></script>
 
         <!-- Fonts -->
@@ -24,50 +24,70 @@
 
         <!-- Metadata -->
         <title>Drax Calculator</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">         
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        
+        <!-- Run table populate on load -->
+        <script> document.addEventListener('DOMContentLoaded', () => onLoad()) </script>
     </head>
 
     <body>
-        <div class="container">
-            <h3>Gym Weight Plate Calculator</h3>
-            <button type="button" class="btn btn-primary" onclick="buildConversionForm()">Generate plate weight</button>
-
-            <div id="container--conversion-form"></div>
-
-            <div id="container--plate-weights">
-                <table class="table table-striped table-hover">
-                    <caption>List Of Machines</caption>
-                    <thead class="table-dark">
-                      <tr>
-                        <th scope="col">Machine</th>
-                        <th scope="col">Series</th>
-                        <th scope="col">Plate Weight</th>
-                        <th scope="col">Select</th>
-                      </tr>
-                    </thead>
-                    <tbody id="tbody--plate-weight" class="table-group-divider">
-                        <!-- Add table rows -->
-                        <tr>
-                            <th scope="row">Omni Lat/Row</th>
-                            <td>Infinity</td>
-                            <td>7.35kg</td>
-                            <td><button type="button" class="btn btn-primary">Set</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Omni Lat/Row</th>
-                            <td>Infinity</td>
-                            <td>7.35kg</td>
-                            <td><button type="button" class="btn btn-primary">Set</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Omni Lat/Row</th>
-                            <td>Infinity</td>
-                            <td>7.35kg</td>
-                            <td><button type="button" class="btn btn-primary">Set</button></td>
-                        </tr>
-                    </tbody>
-                  </table>
+        <nav class="navbar bg-danger">
+            <div class="container-fluid ">
+                <span class="navbar-brand text-light">
+                    <img src="../../images/icon.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top">
+                    Drax Calculator
+                </span> 
             </div>
+        </nav>
+
+        <div class="container mt-3">
+            <div class="card">
+                <div class="card-header">
+                    Calculate Plate Weight
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Select a machine from the table set your weight context. 
+                        Then enter a plate number or target wait to calculate your settings.
+                    </p>
+                    <form class="row g-3">
+                        <div class="col-md-2">
+                            <label for="input--machine-name" class="form-label">Machine Name</label>
+                            <input type="text" class="form-control" id="input--machine-name" placeholder="Set machine" disabled readonly>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="input--plate-weight" class="form-label">kg/plate</label>
+                            <input type="number" class="form-control" id="input--plate-weight" placeholder="Set machine" disabled readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="input--plate-number" class="form-label">Plate Number</label>
+                            <input type="number" class="form-control" id="input--plate-number">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="input--total-weight" class="form-label">Total Weight</label>
+                            <input type="number" class="form-control" id="input--total-weight">
+                        </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3">
+            <table class="table table-striped table-hover">
+                <caption>List Of Machines</caption>
+                <thead class="table-dark">
+                    <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Machine</th>
+                    <th scope="col">KG/P</th>
+                    <th scope="col">Set</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody--plate-weights" class="table-group-divider">
+                    <!-- Plate weights will be dynamically inserted here -->
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
