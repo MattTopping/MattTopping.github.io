@@ -43,6 +43,7 @@ function populatePlateWeightTable(searchString = null) {
     plateWeightTable.innerHTML = "";
 
     // For each machine in each series, calculate plate weight and place on screen
+    // TODO: Flatten all machines across series and sort alphabetically
     window.jsonDb.series.forEach(series => {
         series.machines.forEach(machine => {
             if(!machine.totalStackWeight) return; //Do nothing with this machine if the total stack weight is not defined
