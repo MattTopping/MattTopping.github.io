@@ -11,6 +11,7 @@ const plateWeighInputtId = "input--plate-weight";
 const numOfPlatesInputId = "input--plate-number";
 const totalWeightInputId = "input--total-weight";
 
+// Loads table from JSON file and sets up inputs with debouncing
 function onLoad() {
     getJsonDbForWindow()
         .then(() => setupDebounce(document.getElementById(searchInputId), (searchTerm) => populatePlateWeightTable(searchTerm)))
@@ -20,6 +21,7 @@ function onLoad() {
         .catch(err => console.error(err));
 }
 
+// Fetches current JSON config
 async function getJsonDbForWindow() {
     // Fetch current JSON
     const jsonDbFilePath = 'https://matthewtopping.com.au/resources/drax-calculator/conversion-db.json';
@@ -29,6 +31,8 @@ async function getJsonDbForWindow() {
         .catch(err => console.error(err));
 }
 
+// Populates the machine table with all rows 
+// OPTIONAL: Search term to filter out rows based on machine name
 function populatePlateWeightTable(searchString = null) {
     // Ensure the JSON database is loaded
     if (!window.jsonDb) {
@@ -91,6 +95,7 @@ function populatePlateWeightTable(searchString = null) {
     });
 }
 
+// Converts series names into a single char. Saves space in table.
 function convertSeriesToSingleChar(seriesName) {
     switch(seriesName) {
         case "Infinity":
@@ -101,6 +106,7 @@ function convertSeriesToSingleChar(seriesName) {
     return seriesName.charAt(0).toUpperCase();
 }
 
+// Calculates the weight per plate based on all available datapoints for a machine
 function calculatePlateWeight(machineDetails) {
     var numOfStacks = machineDetails.numOfStacks ?? 1;
     var numOfPlates = machineDetails.numOfPlates ?? 1;
@@ -109,20 +115,23 @@ function calculatePlateWeight(machineDetails) {
     return machineDetails.totalStackWeight / numOfStacks / numOfPlates / pulleyRatio;
 }
 
+// Calculates and sets the total weight field
 function setWeightTotal(numberOfPlates){
     const weightPerPlateElement = document.getElementById(plateWeighInputtId);
     const totalWeightElement = document.getElementById(totalWeightInputId);
  
-    if(weightPerPlateElement && totalWeightElement) totalWeightElement.value = weightPerPlateElement.value * numberOfPlates;
+    if(weightPerPlateElement.value && totalWeightElement) totalWeightElement.value = weightPerPlateElement.value * numberOfPlates;
 }
 
+// Calculates and sets the number of plates 
 function setNumOfPlates(totalWeight){
     const weightPerPlateElement = document.getElementById(plateWeighInputtId);
     const numOfPlatesElement = document.getElementById(numOfPlatesInputId);
  
-    if(numOfPlatesElement && weightPerPlateElement) numOfPlatesElement.value = totalWeight / weightPerPlateElement.value;
+    if(weightPerPlateElement.value && numOfPlatesElement) numOfPlatesElement.value = totalWeight / weightPerPlateElement.value;
 }
 
+// Set UI state based on the selected machine
 function setMachineContext(machine){
     const plateWeightInput = document.getElementById(plateWeighInputtId);
     plateWeightInput.value = calculatePlateWeight(machine);
@@ -160,6 +169,7 @@ function setMachineContext(machine){
     totalWeightInput.value = null;
 }
 
+// Removes the current machine from the UI state
 function clearMachineContext(){
     const plateWeightInput = document.getElementById(plateWeighInputtId);
     plateWeightInput.value = null;
@@ -177,17 +187,20 @@ function clearMachineContext(){
     totalWeightInput.value = null;
 }
 
+// Clears the search box and reload table unfiltered
 function clearSearchContext(){
     const searchInput = document.getElementById(searchInputId);
     searchInput.value = null;
     populatePlateWeightTable();
 }
 
+
+// Sets up search debouncing
 function setupDebounce(element, callback) {
     // Setup filter inputs and their event listeners
     var timeout = null
     element.addEventListener("keyup", () => {
         clearTimeout(timeout);
-        timeout = setTimeout(() => callback(element.value), 1000);
+        timeout = setTimeout(() => callback(element.value), 750);
     });
 }
