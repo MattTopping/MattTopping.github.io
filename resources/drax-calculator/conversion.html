@@ -46,36 +46,34 @@
                     Calculate Plate Weight
                 </div>
                 <div class="card-body">
-                    <p class="card-text">
-                        Select a machine from the table set your weight context. 
-                        Then enter a plate number or target wait to calculate your settings.
-                    </p>
-                    <form class="row g-3">
-                        <div class="col-md-2">
-                            <label for="input--machine-name" class="form-label">Machine Name</label>
-                            <input type="text" class="form-control" id="input--machine-name" placeholder="Set machine" disabled readonly>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="input--plate-weight" class="form-label">kg/plate</label>
-                            <input type="number" class="form-control" id="input--plate-weight" placeholder="Set machine" disabled readonly>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="input--plate-number" class="form-label">Plate Number</label>
-                            <input type="number" class="form-control" id="input--plate-number">
-                        </div>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Select a machine from the table to set your calculator context.</li>
+                        <li class="list-group-item">Enter either a plate number or a target weight to calculate the value based on the selected machine.</li>
+                    </ul>
 
-                        <div class="col-md-4">
-                            <label for="input--total-weight" class="form-label">Total Weight</label>
-                            <input type="number" class="form-control" id="input--total-weight">
-                        </div>
-                        </form>
+                    <div class="input-group mb-3">
+                        <input id="input--plate-weight" type="number" class="form-control" placeholder="Select a machine" disabled readonly>
+                        <span class="input-group-text">KG/P</span>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">No.</span>
+                        <input id="input--plate-number" type="number" class="form-control" placeholder="No. of plates">
+                        <input id="input--total-weight" type="number" class="form-control" placeholder="Total weight">
+                        <span class="input-group-text">KG</span>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="container mt-3">
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fas fa-dumbbell"></i></span>
+                <input id="input--search" type="text" class="form-control" placeholder="Search">
+                <button id="btn--clear-search" class="btn btn-danger" onclick="clearSearchContext()"><i class="fas fa-trash" aria-hidden="true"></i></button>
+            </div>
+
             <table class="table table-striped table-hover">
-                <caption>List Of Machines</caption>
                 <thead class="table-dark">
                     <tr>
                     <th scope="col"></th>

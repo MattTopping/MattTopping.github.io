@@ -1,3 +1,8 @@
 .font--default {
     font-family: Arial, sans-serif;
 }
+
+.input-group--max-50{
+    max-width: 50%;
+    overflow: hidden;
+}
