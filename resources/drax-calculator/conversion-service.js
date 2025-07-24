@@ -17,31 +17,6 @@ const totalWeightInputId = "input--total-weight";
 // Loads table from JSON file and sets up inputs with debouncing
 function onLoad() {
     getJsonDbForWindow()
-        .then(() => {
-            // Inject two test machines into Alpha series for sort testing
-            if (window.jsonDb && Array.isArray(window.jsonDb.series)) {
-                const alphaSeries = window.jsonDb.series.find(s => s.seriesName === "Alpha");
-                if (alphaSeries && Array.isArray(alphaSeries.machines)) {
-                    // Only add if not already present (avoid duplicates on repeated calls)
-                    if (!alphaSeries.machines.some(m => m.machineName === "A-Test Machine")) {
-                        alphaSeries.machines.push({
-                            machineName: "A-Test Machine",
-                            totalStackWeight: Math.floor(Math.random() * 100) + 1,
-                            numOfPlates: Math.floor(Math.random() * 10) + 1,
-                            pulleyRatio: 1
-                        });
-                    }
-                    if (!alphaSeries.machines.some(m => m.machineName === "Z-Test Machine")) {
-                        alphaSeries.machines.push({
-                            machineName: "Z-Test Machine",
-                            totalStackWeight: Math.floor(Math.random() * 100) + 1,
-                            numOfPlates: Math.floor(Math.random() * 10) + 1,
-                            pulleyRatio: 1
-                        });
-                    }
-                }
-            }
-        })
         .then(() => setupDebounce(document.getElementById(searchInputId), (searchTerm) => populatePlateWeightTable(searchTerm)))
         .then(() => setupDebounce(document.getElementById(numOfPlatesInputId), (plateNum) => setWeightTotal(plateNum)))
         .then(() => setupDebounce(document.getElementById(totalWeightInputId), (weightNum) => setNumOfPlates(weightNum)))
@@ -114,7 +89,8 @@ function calculatePlateWeight(machineDetails) {
     var numOfPlates = machineDetails.numOfPlates ?? 1;
     var pulleyRatio = machineDetails.pulleyRatio ?? 1;
 
-    return machineDetails.totalStackWeight / numOfStacks / numOfPlates / pulleyRatio;
+    const result = machineDetails.totalStackWeight / numOfStacks / numOfPlates / pulleyRatio;
+    return Math.round(result * 100) / 100; // Round to 2 decimal places
 }
 
 // Calculates and sets the total weight field
@@ -122,7 +98,15 @@ function setWeightTotal(numberOfPlates){
     const weightPerPlateElement = document.getElementById(plateWeighInputtId);
     const totalWeightElement = document.getElementById(totalWeightInputId);
 
-    if(weightPerPlateElement.value && totalWeightElement) totalWeightElement.value = weightPerPlateElement.value * numberOfPlates;
+    if(!numberOfPlates) {
+        totalWeightElement.value = null;
+        return; // Exit early if no plates are specified
+    }
+
+    if(weightPerPlateElement.value && totalWeightElement) {
+        const result = weightPerPlateElement.value * numberOfPlates;
+        totalWeightElement.value = Math.round(result * 100) / 100; // Round to 2 decimal places
+    }
 }
 
 // Calculates and sets the number of plates 
@@ -130,7 +114,15 @@ function setNumOfPlates(totalWeight){
     const weightPerPlateElement = document.getElementById(plateWeighInputtId);
     const numOfPlatesElement = document.getElementById(numOfPlatesInputId);
 
-    if(weightPerPlateElement.value && numOfPlatesElement) numOfPlatesElement.value = totalWeight / weightPerPlateElement.value;
+    if(!totalWeight) {
+        numOfPlatesElement.value = null;
+        return; // Exit early if no total weight is specified
+    }
+
+    if(weightPerPlateElement.value && numOfPlatesElement) {
+        const result = totalWeight / weightPerPlateElement.value;
+        numOfPlatesElement.value = Math.round(result * 100) / 100; // Round to 2 decimal places
+    }
 }
 
 // Set UI state based on the selected machine
@@ -196,10 +188,18 @@ function clearSearchContext(){
 // Sets up search debouncing
 function setupDebounce(element, callback) {
     // Setup filter inputs and their event listeners
-    var timeout = null
+    var timeout = null;
+
     element.addEventListener("keyup", () => {
+        // Set loading state
+        toggleInputLoading(element.id, true);
         clearTimeout(timeout);
-        timeout = setTimeout(() => callback(element.value), debounceTime);
+
+        // Use a timeout to debounce the input
+        timeout = setTimeout(() => {
+            callback(element.value);
+            toggleInputLoading(element.id, false);
+        }, debounceTime);
     });
 }
 
@@ -260,4 +260,17 @@ function createMachineTableRow(machine) {
     tableRow.appendChild(setCell);
 
     return tableRow;
+}
+
+function toggleInputLoading (inputId, isLoading){
+    const spinner = document.querySelector(`span[for="${inputId}"]`);
+    const icon = document.querySelector(`i[for="${inputId}"]`);
+
+    if(isLoading){
+        icon.classList.add('d-none');
+        spinner.classList.remove('d-none');
+    } else {
+        icon.classList.remove('d-none');
+        spinner.classList.add('d-none');
+    }
 }

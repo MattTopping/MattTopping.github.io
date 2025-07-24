@@ -57,10 +57,16 @@
                     </div>
 
                     <div class="input-group mb-3">
-                        <span class="input-group-text">No.</span>
-                        <input id="input--plate-number" type="number" class="form-control" placeholder="No. of plates" disabled>
-                        <input id="input--total-weight" type="number" class="form-control" placeholder="Total weight" disabled>
-                        <span class="input-group-text">KG</span>
+                        <span class="input-group-text text-align-center">
+                            <i class="fas fa-server" for="input--plate-number"></i>
+                            <span class="spinner-border spinner-border-sm d-none" for="input--plate-number"></span>
+                        </span>
+                        <input id="input--plate-number" type="number" class="form-control" placeholder="Plate No." disabled>
+                        <span class="input-group-text text-align-center">
+                            <i class="fas fa-weight-hanging" for="input--total-weight"></i>
+                            <span class="spinner-border spinner-border-sm d-none" for="input--total-weight"></span>
+                        </span>
+                        <input id="input--total-weight" type="number" class="form-control" placeholder="Total KG" disabled>
                     </div>
                 </div>
             </div>
@@ -68,7 +74,10 @@
 
         <div class="container mt-3">
             <div class="input-group mb-3">
-                <span class="input-group-text"><i class="fas fa-dumbbell"></i></span>
+                <span class="input-group-text text-align-center">
+                    <i class="fas fa-dumbbell" for="input--search"></i>
+                    <span class="spinner-border spinner-border-sm d-none" for="input--search"></span>
+                </span>
                 <input id="input--search" type="text" class="form-control" placeholder="Search">
                 <button id="btn--clear-search" class="btn btn-danger" onclick="clearSearchContext()"><i class="fas fa-trash" aria-hidden="true"></i></button>
             </div>
