@@ -24,6 +24,18 @@
                     "pulleyRatio": null
                 }
             ]
-        }
+        },
+        {
+            "seriesName": "Universal",
+            "machines": [
+                {
+                    "machineName": "Assisted Chin/Dip",
+                    "totalStackWeight": 110,
+                    "numOfStacks": null,
+                    "numOfPlates": 17,
+                    "pulleyRatio": null
+                }
+            ]
+        },
     ]
 }
