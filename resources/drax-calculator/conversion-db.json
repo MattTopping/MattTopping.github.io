@@ -29,6 +29,13 @@
                     "numOfStacks": null,
                     "numOfPlates": 20,
                     "pulleyRatio": null
+                },
+                {
+                    "machineName": "Omni Leg Press",
+                    "totalStackWeight": 195,
+                    "numOfStacks": 1,
+                    "numOfPlates": 20,
+                    "pulleyRatio": 1
                 }
             ]
         },
