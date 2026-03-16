@@ -14,15 +14,22 @@
                 {
                     "machineName": "Lying Leg Curl",
                     "totalStackWeight": 75, 
-                    "numOfStacks": 1,
+                    "numOfStacks": null,
                     "numOfPlates": 15,
-                    "pulleyRatio": 1
+                    "pulleyRatio": null
                 }
             ]
         },
         {
             "seriesName": "Infinity",
             "machines": [
+               {
+                    "machineName": "Leg Extension",
+                    "totalStackWeight": 148,
+                    "numOfStacks": null,
+                    "numOfPlates": 20,
+                    "pulleyRatio": null
+                },
                 {
                     "machineName": "Omni Lat/Row",
                     "totalStackWeight": 147,
@@ -33,9 +40,9 @@
                 {
                     "machineName": "Omni Leg Press",
                     "totalStackWeight": 195,
-                    "numOfStacks": 1,
+                    "numOfStacks": null,
                     "numOfPlates": 20,
-                    "pulleyRatio": 1
+                    "pulleyRatio": null
                 }
             ]
         },
