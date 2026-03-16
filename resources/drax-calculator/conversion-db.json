@@ -10,6 +10,13 @@
                     "numOfStacks": 2,
                     "numOfPlates": 20,
                     "pulleyRatio": 2
+                },
+                {
+                    "machineName": "Lying Leg Curl",
+                    "totalStackWeight": 75, 
+                    "numOfStacks": 1,
+                    "numOfPlates": 15,
+                    "pulleyRatio": 1
                 }
             ]
         },
