@@ -38,6 +38,13 @@
                     "pulleyRatio": null
                 },
                 {
+                    "machineName": "Pec Fly/Rear Delt",
+                    "totalStackWeight": 148,
+                    "numOfStacks": null,
+                    "numOfPlates": 20,
+                    "pulleyRatio": null
+                },
+                {
                     "machineName": "Omni Leg Press",
                     "totalStackWeight": 195,
                     "numOfStacks": null,
